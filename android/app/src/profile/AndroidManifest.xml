@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="New App Name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true">
+        <!-- Your activities and other application components go here -->
+        <!-- Assuming MainActivity is your main Flutter activity -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
